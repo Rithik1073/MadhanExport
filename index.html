@@ -57,21 +57,6 @@
       color: #ffcc66;
     }
 
-    .contact-btn {
-      background-color: #f1f1f1;
-      color: #0e0e0e;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 13px;
-    }
-
-    .contact-btn:hover {
-      background-color: #ffcc66;
-      color: #0e0e0e;
-    }
-
     /* Sections */
     .section {
       min-height: 100vh;
@@ -82,7 +67,7 @@
     }
 
     .home-section {
-      background: url('https://images.unsplash.com/photo-1577363662274-29c7e6f1f6b8?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      background: url('https://static.vecteezy.com/system/resources/thumbnails/024/946/449/small/vibrant-silk-textiles-in-a-colorful-heap-generated-by-ai-free-photo.jpg') center/cover no-repeat;
       position: relative;
     }
 
@@ -111,7 +96,8 @@
       letter-spacing: 2px;
     }
 
-    .about-section .content {
+    /* Shared Layout for About, Services, Products, Contact */
+    .content {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -119,42 +105,32 @@
       gap: 40px;
     }
 
-    .about-section img {
+    .content img {
       width: 500px;
       border-radius: 10px;
     }
 
-    .about-section .text {
+    .text {
       max-width: 500px;
     }
 
-    .about-section h2 {
+    h2 {
       color: #ffcc66;
       font-family: 'Playfair Display', serif;
       margin-bottom: 20px;
     }
 
-    .products-section,
-    .services-section,
-    .contact-section {
-      text-align: center;
-    }
-
-    .products-section h2,
-    .services-section h2,
-    .contact-section h2 {
-      font-family: 'Playfair Display', serif;
-      color: #ffcc66;
-      margin-bottom: 20px;
-    }
-
-    .products-section p,
-    .services-section p,
-    .contact-section p {
-      max-width: 700px;
-      margin: auto;
+    p {
       line-height: 1.8;
       color: #ddd;
+    }
+
+    /* Section-Specific Styles */
+    .products-section,
+    .services-section,
+    .about-section,
+    .contact-section {
+      text-align: left;
     }
 
     /* Footer */
@@ -192,12 +168,12 @@
         border-radius: 8px;
       }
 
-      .about-section .content {
+      .content {
         flex-direction: column;
         text-align: center;
       }
 
-      .about-section img {
+      .content img {
         width: 100%;
       }
     }
@@ -213,18 +189,19 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="contact-btn">Contact Us</button>
       <button class="menu-toggle">☰</button>
     </nav>
   </header>
 
+  <!-- Home -->
   <section id="home" class="section home-section">
     <div class="overlay">
       <h1>MADHAN EXPORTS</h1>
-      <p>Textile Imports & Exports</p>
+      <p>Mfrs. Yarn Dyed, Dyed & Printing Exports Fabrics</p>
     </div>
   </section>
 
+  <!-- About Us -->
   <section id="about" class="section about-section">
     <div class="content">
       <div class="image">
@@ -248,38 +225,73 @@
     </div>
   </section>
 
+  <!-- Products (Image Left, Text Right) -->
   <section id="products" class="section products-section">
-    <div>
-      <h2>Our Products</h2>
-      <p>
-        We offer a diverse range of textile products, including fabrics, yarns, and
-        ready-made garments, all crafted to meet global quality standards.
-      </p>
+    <div class="content">
+        <div class="text">
+        <h2>Our Products</h2>
+        <p>
+          We offer a diverse range of textile products, including fabrics, yarns, and
+          ready-made garments, all crafted to meet global quality standards. Each
+          product is made with precision, durability, and design innovation in mind.
+        </p>
+        <p>
+          Our collection includes cotton, polyester, and blended fabrics suitable for
+          both fashion and industrial applications, ensuring we cater to a wide range
+          of customer requirements worldwide.
+        </p>
+      </div>
+      <div class="image">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" alt="Textile Products" />
+      </div>
+      
     </div>
   </section>
 
+  <!-- Services -->
   <section id="services" class="section services-section">
-    <div>
-      <h2>Our Services</h2>
-      <p>
-        We provide end-to-end textile sourcing, custom design solutions, and
-        international logistics support for smooth export operations.
-      </p>
+    <div class="content">
+      <div class="image">
+        <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=800&q=80" alt="Textile Services" />
+      </div>
+      <div class="text">
+        <h2>Our Services</h2>
+        <p>
+          We provide end-to-end textile sourcing, custom design solutions, and
+          international logistics support for smooth export operations. Our team
+          ensures every step of the process — from procurement to packaging —
+          meets the highest standards of efficiency and reliability.
+        </p>
+        <p>
+          Whether you need tailored fabric designs, product development, or
+          specialized quality control, our expert services help you achieve your
+          global business goals with confidence.
+        </p>
+      </div>
     </div>
   </section>
 
+  <!-- Contact (Image Left, Text Right) -->
   <section id="contact" class="section contact-section">
-    <div>
-      <h2>Contact Us</h2>
-      <p>Email: madhanexports@gmail.com</p>
-      <p>Phone: +91 98427 07008</p>
-      <p>Address: MADHAN EXPORT<br>
-39-A, Sullikadu, Mullai Nagar,<br>
-Vediyarasampalayam Pirivu,<br>
-Tiruchengode Road, Pallipalayam,<br>
-Erode - 638 008,<br>
-Tamilnadu, India.<br>
-</p>
+    <div class="content">
+        <div class="text">
+        <h2>Contact Us</h2>
+        <p><strong>Email:</strong> madhanexports@gmail.com</p>
+        <p><strong>Phone:</strong> +91 98427 07008</p>
+        <p>
+          <strong>Address:</strong><br>
+          MADHAN EXPORT<br>
+          39-A, Sullikadu, Mullai Nagar,<br>
+          Vediyarasampalayam Pirivu,<br>
+          Tiruchengode Road, Pallipalayam,<br>
+          Erode - 638 008,<br>
+          Tamilnadu, India.
+        </p>
+      </div>
+      <div class="image">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80" alt="Contact Madhan Exports" />
+      </div>
+      
     </div>
   </section>
 
@@ -294,7 +306,6 @@ Tamilnadu, India.<br>
 
     window.addEventListener("scroll", () => {
       let current = "";
-
       sections.forEach((section) => {
         const sectionTop = section.offsetTop - 150;
         const sectionHeight = section.clientHeight;
@@ -314,7 +325,6 @@ Tamilnadu, India.<br>
     // Mobile menu toggle
     const menuToggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector("nav");
-
     menuToggle.addEventListener("click", () => {
       nav.classList.toggle("nav-open");
     });
